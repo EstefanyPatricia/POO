@@ -1,17 +1,12 @@
-import email
-from turtle import st
-from unicodedata import name
+from ast import Str
+from account import Account
 
 
-class Driver :
+class Driver (Account):
     id          = int
-    name        = str
-    document    = int
-    email       = str
-    password    = str
+    license     = str
 
-    def __init__(self, name, document, email, password):
-        self.name       = name
-        self.document   = document
-        self.email      = email
-        self.password   = password
+    def __init__(self, idDriver, license, name, document, mail, password, gender, numberCell, age):
+        super().__init__(name, document, mail, password, gender, numberCell, age)
+        self.idDriver   = idDriver
+        self.license    = license

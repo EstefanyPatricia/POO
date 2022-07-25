@@ -1,16 +1,17 @@
-from lib2to3.pgen2 import driver
+
 from pyexpat import model
+from account import Account
 
 
-class Car :
-    id              =int
-    driver          =str
-    passaggers      =str
-    brand           =str
-    model           =str
+class Car:
+    id              = int
+    #Cambiamos tipo de dato driver por Account (primero inportar la informacion)
+    driver          = Account("","")
+    passaggers      = str
+    brand           = str
+    model           = str
+    license         = str
 
-    def __init__(self, driver, passaggers, brand, model):
+    def __init__(self, license, driver):
+        self.license    = license
         self.driver     = driver
-        self.passaggers = passaggers
-        self.brand      = brand
-        self.model      = model

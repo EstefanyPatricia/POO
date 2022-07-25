@@ -1,15 +1,14 @@
-import email
-
-
-class Account :
+class Account() :
     id          = int
     name        = str
-    document    = int
-    email       = str
+    document    = str
+    mail        = str
     password    = str
+    gender      = str
+    numberCell  = int
+    age         = int
 
-    def __init__(self, name, document, email, password):
+    #Metodo Constructor en Python
+    def __init__(self, name, document):
         self.name       = name
         self.document   = document
-        self.email      = email
-        self.password   = password
